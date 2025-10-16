@@ -11,7 +11,7 @@ export async function POST(req) {
     const newBooking = await Booking.create(body);
     return NextResponse.json({ success: true, booking: newBooking }, { status: 201 });
   } catch (error) {
-    console.error("Booking API Error:", error);
+    
     return NextResponse.json({ success: false, error: "Failed to create booking" }, { status: 500 });
   }
 }
@@ -23,7 +23,7 @@ export async function GET() {
     const bookings = await Booking.find().sort({ createdAt: -1 });
     return NextResponse.json({ success: true, bookings }, { status: 200 });
   } catch (error) {
-    console.error("Fetch Bookings Error:", error);
+   
     return NextResponse.json({ success: false, error: "Failed to fetch bookings" }, { status: 500 });
   }
 }

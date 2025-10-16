@@ -57,7 +57,6 @@ export function ContactForm() {
         setStatus("Something went wrong. Please try again.");
       }
     } catch (error) {
-      console.error(error);
       setStatus("Error sending message. Please try again later.");
     } finally {
       setIsLoading(false);

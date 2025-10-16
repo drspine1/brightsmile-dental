@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function GallerySection() {
   const images = [
@@ -14,16 +15,21 @@ export default function GallerySection() {
       <h2 className="text-3xl font-bold mb-10 text-blue-600">Clinic Moments</h2>
       <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-6 px-6">
         {images.map((src, i) => (
-          <motion.img
-            key={i}
-            src={src}
-            alt="clinic gallery"
-            className="rounded-xl shadow-lg object-cover h-56 w-full hover:scale-105 transition"
-            initial={{ opacity: 0 }}
+          <motion.div key={i} className="overflow-hidden"
+             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.2 }}
+          >
+            <Image
+            src={src}
+            width={400}
+            height={300}
+            alt="clinic gallery"
+            className="rounded-xl shadow-lg object-cover h-56 w-full hover:scale-105 transition"
+            priority={true}
           />
+          </motion.div>
         ))}
       </div>
     </section>
