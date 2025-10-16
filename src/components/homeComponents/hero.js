@@ -82,7 +82,7 @@ const HeroComponent = () => {
             </Link>
             <Link
               href="/about"
-              className="border border-white text-white hover:bg-sky-100 hover:text-sky-700 px-6 py-3 rounded-full transition-all duration-300 cursor-pointer md:text-lg font-semibold"
+              className="border border-white text-white hover:bg-sky-100 hover:text-sky-700 px-6 py-3 rounded-full transition-all duration-300 cursor-pointer md:text-lg font-semibold hidden md:inline-block"
             >
               Learn More
             </Link>

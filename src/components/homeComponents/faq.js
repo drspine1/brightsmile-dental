@@ -36,10 +36,10 @@ export default function FAQSection() {
             transition={{ delay: i * 0.15, duration: 0.5, ease: "easeOut" }}
           >
             <AccordionItem value={`item-${i}`}>
-              <AccordionTrigger className="text-xl text-gray-800 font-semibold">
+              <AccordionTrigger className="text-lg md:text-xl text-gray-800 font-semibold">
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-gray-700 text-lg">
+              <AccordionContent className="text-gray-700 md:text-lg">
                 {faq.a}
               </AccordionContent>
             </AccordionItem>
