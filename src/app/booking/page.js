@@ -1,8 +1,40 @@
  "use client";
+
+export const metadata = {
+  title: "Book Appointment | SmileCraft Dental Clinic",
+  description:
+    "Schedule your dental appointment online with SmileCraft Dental Clinic. Quick, easy, and convenient — your bright smile awaits!",
+  keywords: [
+    "book dentist appointment",
+    "dental booking",
+    "dentist near me",
+    "SmileCraft appointment",
+  ],
+  openGraph: {
+    title: "Book Appointment | SmileCraft Dental Clinic",
+    description:
+      "Book your next dental visit with SmileCraft Dental — expert care made simple.",
+    url: "https://brightsmile-dental-clinic.vercel.app/booking",
+    siteName: "SmileCraft Dental",
+    images: [
+      {
+        url: "https://brightsmile-dental-clinic.vercel.app/images/dentist.jpg",
+        width: 800,
+        height: 600,
+        alt: "Booking your dental appointment at SmileCraft Dental",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
+
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 
+// app/booking/page.js
 export default function BookingPage() {
   const router = useRouter();
 
